@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <style>
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 8px solid red;
+      border-bottom: 8px solid red;
+      width: 60px;
+      height: 60px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+      margin: 30px;
+    }
+
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style>
+    <div>
+        <div class="sb-profile-header">
+            <div class="sb-header-cover" data-bg-img="{% static 'img/bg/botcover4.jpg' %}">
+            </div>
+        </div>
+        <div class="sb-profile-navmenu">
+            <div class="sb-container">
+                <div class="row align-items-center">
+                    <div class="col-sm-9">
+
+                    </div>
+                    <div class="col-sm-3">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main class="section-bg2 py-40">
+            <div class="sb-container">
+                <div class="row">
+                    <div class="col-lg-4 col-xl-3">
+
+                    </div>
+                    <div class="col-lg-8 col-xl-9">
+                        <div class="activity-main-panel">
+                            <h4>CHAT WITH AI HEALTH BOT</h4>
+                            <div class="bbp-forum-reviews">
+                                <div class="bbp-reviews">
+                                    <div class="bbp-reviews-head">
+                                        <div class="profile">
+                                            <a href="#" class="img"><img src="{% static 'img/aiicon.jpg' %}" alt="" /> <span class="avatar-status"></span></a>
+                                            <div class="info">
+                                                <a href="#"><h5 class="author_name">HEALTH BOT</h5></a><span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bbp-reviews-body">
+                                        <p> As an AI language model, I am here to help you with any questions.</p>
+                                    </div>
+                                </div>
+                                <div class="bbp-reviews">
+                                    <div class="bbp-reviews-head">
+                                        <div class="profile">
+                                            <a href="#" class="img"><img src="{% static 'img/usericon.png' %}" alt="" /> <span class="avatar-status"></span></a>
+                                            <div class="info">
+                                                <a href="#"><h5 class="author_name">USER</h5></a><span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bbp-reviews-body"><p>I have little trouble in breathing</p></div>
+                                </div>
+                            </div>
+                            <div class="loader"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+            <br>
+            </div>
+        </main>
+    </div>
+{% endblock %}
